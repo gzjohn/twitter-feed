@@ -1,4 +1,4 @@
-ox:
+box:
   id: openjdk
   ports:
     - $PORT
