@@ -1,4 +1,9 @@
-+box:
+#Use OpenJDK base docker image from dockerhub and open the application port on the docker container
+box:
+  id: openjdk
+  ports:
+    - $PORT
+
 #Build our application using Maven, just as we always have
 build:
   steps:
@@ -42,7 +47,5 @@ deploy-to-cluster:
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
         command: apply -f kubernetes.ymlbox:
-  id: openjdk
-  ports:
-    - $PORT
+
     
